@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet } from "react-native";
 
 import ActivityIndicator from "../components/ActivityIndicator";
-import Screen from "../components/Screen";
+import AppButton from "../components/AppButton";
+import AppText from "../components/AppText/AppText";
 import Card from "../components/Card";
 import colors from "../config/colors";
-import routes from "../navigation/routes";
 import listingsApi from "../api/listings";
-import AppText from "../components/AppText/AppText";
-import AppButton from "../components/AppButton";
+import routes from "../navigation/routes";
+import Screen from "../components/Screen";
 
 function ListingsScreen({ navigation }) {
   const [listings, setListings] = useState([]);
@@ -38,7 +38,7 @@ function ListingsScreen({ navigation }) {
           <AppButton title="Retry" onPress={loadListings} />
         </>
       )}
-      {/* <ActivityIndicator visible={true} /> */}
+      <ActivityIndicator visible={loading} />
       <FlatList
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
