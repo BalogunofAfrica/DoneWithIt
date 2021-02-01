@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add lotiie-react-native
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add expo-blur@~8.2.0
 
 PATH: 
   C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenJDK\openjdk-8u272-b10\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\zee\anaconda3;C:\Users\zee\anaconda3\Library\mingw-w64\bin;C:\Users\zee\anaconda3\Library\usr\bin;C:\Users\zee\anaconda3\Library\bin;C:\Users\zee\anaconda3\Scripts;C:\Users\zee\AppData\Local\Microsoft\WindowsApps;C:\Android\platform-tools;C:\Users\zee\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\zee\AppData\Roaming\npm;C:\Users\zee\AppData\Local\Android\Sdk\platform-tools;C:\Users\zee\AppData\Local\Yarn\bin;
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/lotiie-react-native: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
-      at Request.emit (node:events:327:20)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
-      at Request.emit (node:events:327:20)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141643:12)
-      at Object.onceWrapper (node:events:433:28)
-      at IncomingMessage.emit (node:events:339:22)
-      at endReadableNT (node:internal/streams/readable:1289:12)
-      at processTicksAndRejections (node:internal/process/task_queues:80:21)
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\zee\AppData\Local\Yarn\Cache\v6\npm-expo-blur-8.2.2-a7643d893afb7aed5512b25d5df22ee6083832c1-integrity\node_modules\expo-blur\src\BlurView.types.ts' -> 'C:\Users\zee\DoneWithIt\node_modules\expo-blur\src\BlurView.types.ts'
 
 npm manifest: 
   {
@@ -37,8 +27,10 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "@react-native-async-storage/async-storage": "^1.13.3",
       "@react-native-community/hooks": "^2.6.0",
       "@react-native-community/masked-view": "0.1.10",
+      "@react-native-community/netinfo": "5.9.6",
       "@react-navigation/bottom-tabs": "^5.11.2",
       "@react-navigation/native": "^5.8.10",
       "@react-navigation/stack": "^5.12.8",
@@ -51,12 +43,15 @@ npm manifest:
       "expo-status-bar": "~1.0.2",
       "formik": "^2.1.4",
       "lottie-react-native": "~2.6.1",
+      "moment": "^2.29.1",
       "react": "16.13.1",
       "react-dom": "16.13.1",
       "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
       "react-native-dialogflow": "^3.2.2",
+      "react-native-expo-image-cache": "^4.1.0",
       "react-native-gesture-handler": "~1.7.0",
       "react-native-gifted-chat": "^0.16.3",
+      "react-native-progress": "^4.1.2",
       "react-native-reanimated": "~1.13.0",
       "react-native-safe-area-context": "3.1.4",
       "react-native-screens": "~2.10.1",
@@ -1224,6 +1219,22 @@ Lockfile:
       "@types/yargs" "^15.0.0"
       "chalk" "^3.0.0"
   
+  "@react-native-async-storage/async-storage@^1.13.3":
+    "integrity" "sha512-s/7KyzFxS3WesYn5RrfRg1Pyz5EYDZAJxIxIuzmJZ1FlvpvaZGAZq9xJmVN2OG6S6NhfiY8Tszkau15hHreRag=="
+    "resolved" "https://registry.npmjs.org/@react-native-async-storage/async-storage/-/async-storage-1.13.3.tgz"
+    "version" "1.13.3"
+    dependencies:
+      "deep-assign" "^3.0.0"
+  
+  "@react-native-community/art@^1.1.2":
+    "integrity" "sha512-a+ZcRGl/BzLa89yi33Mbn5SHavsEXqKUMdbfLf3U8MDLElndPqUetoJyGkv63+BcPO49UMWiQRP1YUz6/zfJ+A=="
+    "resolved" "https://registry.npmjs.org/@react-native-community/art/-/art-1.2.0.tgz"
+    "version" "1.2.0"
+    dependencies:
+      "art" "^0.10.3"
+      "invariant" "^2.2.4"
+      "prop-types" "^15.7.2"
+  
   "@react-native-community/cli-debugger-ui@^4.13.1":
     "integrity" "sha512-UFnkg5RTq3s2X15fSkrWY9+5BKOFjihNSnJjTV2H5PtTUFbd55qnxxPw8CxSfK0bXb1IrSvCESprk2LEpqr5cg=="
     "resolved" "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.13.1.tgz"
@@ -1353,6 +1364,11 @@ Lockfile:
     "integrity" "sha512-rk4sWFsmtOw8oyx8SD3KSvawwaK7gRBSEIy2TAwURyGt+3TizssXP1r8nx3zY+R7v2vYYHXZ+k2/GULAT/bcaQ=="
     "resolved" "https://registry.npmjs.org/@react-native-community/masked-view/-/masked-view-0.1.10.tgz"
     "version" "0.1.10"
+  
+  "@react-native-community/netinfo@5.9.6":
+    "integrity" "sha512-cEkA1Apg8+VjnDdeDZRHI+2RqouiPKgYnewouRkvF4ettH9ZS4Cmi/nANQKIpIu2L+czboxM3fCZ44nc7IM9VQ=="
+    "resolved" "https://registry.npmjs.org/@react-native-community/netinfo/-/netinfo-5.9.6.tgz"
+    "version" "5.9.6"
   
   "@react-navigation/bottom-tabs@^5.11.2":
     "integrity" "sha512-7+hH00N9Ze74VcX8uYWVyXFXZ0Fwid+lG+SSLtmnJjk1Y6oIQpQ17EPqKO0UZlKKjhsvMlAnL5fdgFtoqnSjcA=="
@@ -1683,6 +1699,11 @@ Lockfile:
     "integrity" "sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg="
     "resolved" "https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz"
     "version" "0.3.2"
+  
+  "art@^0.10.3":
+    "integrity" "sha512-HXwbdofRTiJT6qZX/FnchtldzJjS3vkLJxQilc3Xj+ma2MXjY4UAyQ0ls1XZYVnDvVIBiFZbC6QsvtW86TD6tQ=="
+    "resolved" "https://registry.npmjs.org/art/-/art-0.10.3.tgz"
+    "version" "0.10.3"
   
   "asap@~2.0.3", "asap@~2.0.6":
     "integrity" "sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY="
@@ -2319,6 +2340,11 @@ Lockfile:
       "shebang-command" "^1.2.0"
       "which" "^1.2.9"
   
+  "crypto-js@^3.1.9-1":
+    "integrity" "sha512-DIT51nX0dCfKltpRiXV+/TVZq+Qq2NgF4644+K7Ttnla7zEzqc+kjJyiB96BHNyUTBxyjzRcZYpUdZa+QAqi6Q=="
+    "resolved" "https://registry.npmjs.org/crypto-js/-/crypto-js-3.3.0.tgz"
+    "version" "3.3.0"
+  
   "css-in-js-utils@^2.0.0":
     "integrity" "sha512-PJF0SpJT+WdbVVt0AOYp9C8GnuruRlL/UFW7932nLWmFLQTaWEzTBQEx7/hn4BuV+WON75iAViSUJLiU3PKbpA=="
     "resolved" "https://registry.yarnpkg.com/css-in-js-utils/-/css-in-js-utils-2.0.1.tgz"
@@ -2664,6 +2690,11 @@ Lockfile:
       "path-browserify" "^1.0.0"
       "url-parse" "^1.4.4"
   
+  "expo-blur@*":
+    "integrity" "sha512-zqZENclTYBtVAZOsnDROT5PQ9MbMxa5A36J+aU2NiV6MqLYlUh/b/FnR0JPAuY4F6jS6U7sYiAlStzIXpLd7XQ=="
+    "resolved" "https://registry.npmjs.org/expo-blur/-/expo-blur-9.0.0.tgz"
+    "version" "9.0.0"
+  
   "expo-constants@^9.2.0", "expo-constants@~9.2.0":
     "integrity" "sha512-WKwiEMvBgPrEPEyZKm21UUB2KWQux9OCWf6ZDORLTln7kO3rsbaJEprfWUWTP7AxyaLMYfN+/0WFHjZc25SZWQ=="
     "resolved" "https://registry.yarnpkg.com/expo-constants/-/expo-constants-9.2.0.tgz"
@@ -2679,7 +2710,7 @@ Lockfile:
     dependencies:
       "fbjs" "1.0.0"
   
-  "expo-file-system@~9.2.0":
+  "expo-file-system@*", "expo-file-system@~9.2.0":
     "integrity" "sha512-GsDf+E6e1WyYqyUiXbcWthLk7oVO+WDticnHUGAzb17hVCgxJhlUbRriwY3kBkQAX1mr+Hq9lkgJPIRbV197Fw=="
     "resolved" "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-9.2.0.tgz"
     "version" "9.2.0"
@@ -4387,6 +4418,11 @@ Lockfile:
     dependencies:
       "minimist" "^1.2.5"
   
+  "moment@^2.29.1":
+    "integrity" "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ=="
+    "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz"
+    "version" "2.29.1"
+  
   "ms@2.0.0":
     "integrity" "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
     "resolved" "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz"
@@ -4949,6 +4985,14 @@ Lockfile:
     dependencies:
       "jsrsasign" "^8.0.12"
   
+  "react-native-expo-image-cache@^4.1.0":
+    "integrity" "sha512-U6xHtuyalNZThhM11lu4+mRNSpJFkdh4dSLbWkKAj5QfY63cKlTnDVtv8c88njn71GHL4exEzf8hNKBMWhH37Q=="
+    "resolved" "https://registry.npmjs.org/react-native-expo-image-cache/-/react-native-expo-image-cache-4.1.0.tgz"
+    "version" "4.1.0"
+    dependencies:
+      "crypto-js" "^3.1.9-1"
+      "lodash" "^4.17.4"
+  
   "react-native-gesture-handler@>= 1.0.0", "react-native-gesture-handler@~1.7.0":
     "integrity" "sha512-1CrjJf8Z6Iz2XWzfZknYtsm2sud5Lu/pLhhokkgBIKttxqGDtetDEVFDJOTJWJyKCrUPk0X5tnWi/diSF4q++w=="
     "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-1.7.0.tgz"
@@ -4992,6 +5036,14 @@ Lockfile:
     "version" "0.0.22"
     dependencies:
       "prop-types" "^15.7.x"
+  
+  "react-native-progress@^4.1.2":
+    "integrity" "sha512-sFHs6k6npWDOyvQoL2NeyOyHb+q1s8iOAOeyzoObN77zkxOAsgJt9FcSJLRq70Mw7qSGNJMFDqCgvYR1huYRwQ=="
+    "resolved" "https://registry.npmjs.org/react-native-progress/-/react-native-progress-4.1.2.tgz"
+    "version" "4.1.2"
+    dependencies:
+      "@react-native-community/art" "^1.1.2"
+      "prop-types" "^15.7.2"
   
   "react-native-reanimated@~1.13.0":
     "integrity" "sha512-O+WhgxSjOIzcVdAAvx+h2DY331Ek1knKlaq+jsNLpC1fhRy9XTdOObovgob/aF2ve9uJfPEawCx8381g/tUJZQ=="
@@ -5083,7 +5135,7 @@ Lockfile:
     "resolved" "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz"
     "version" "0.13.4"
   
-  "react@*", "react@^16.0", "react@^16.13.1", "react@^16.8.0 || ^17.0.0", "react@>=16.3.0", "react@>=16.5.1", "react@>=16.8.0", "react@16.13.1":
+  "react@*", "react@^16.0", "react@^16.13.1", "react@^16.8", "react@^16.8.0 || ^17.0.0", "react@>=16.3.0", "react@>=16.5.1", "react@>=16.8.0", "react@16.13.1":
     "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
     "resolved" "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz"
     "version" "16.13.1"
